@@ -2,7 +2,7 @@ module Fastbill
   module Automatic
     class Webhook
 
-      attr_reader :type, :customer, :subscription
+      attr_reader :type, :customer, :subscription, :payment
 
       def initialize(attributes = {})
         set_attributes(attributes)
