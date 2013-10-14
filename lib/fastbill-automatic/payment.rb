@@ -9,6 +9,11 @@ module Fastbill
       def self.create(attributes)
         raise FastbillError.new('Create method not implemented.')
       end
+
+      def get(options = {})
+        raise FastbillError.new('Get method not implemented.')
+      end
+
     end
   end
 end
