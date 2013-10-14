@@ -20,6 +20,7 @@ module Fastbill
     autoload :Template,     "fastbill-automatic/template"
     autoload :Article,      "fastbill-automatic/article"
     autoload :Coupon,       "fastbill-automatic/coupon"
+    autoload :Payment,      "fastbill-automatic/payment"
 
     module Services
       autoload :Get,           "fastbill-automatic/services/get"
