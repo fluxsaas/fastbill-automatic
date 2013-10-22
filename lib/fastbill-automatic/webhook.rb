@@ -9,7 +9,7 @@ module Fastbill
       end
 
       def self.parse(params)
-        self.new( JSON.parse(params) )
+        self.new(params)
       end
 
       def set_attributes(attributes)
