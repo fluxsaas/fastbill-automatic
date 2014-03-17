@@ -4,8 +4,8 @@ module Fastbill
       module Get
         module ClassMethods
 
-          def get(options = {})
-            response = Fastbill::Automatic.request("#{self.name.split("::").last.downcase}.get", options)
+          def get(filter = {}, limit = 20, offset = 0)
+            response = Fastbill::Automatic.request("#{self.name.split("::").last.downcase}.get", filter, limit, offset)
             results_from(response)
           end
 

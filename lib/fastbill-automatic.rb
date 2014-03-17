@@ -67,8 +67,8 @@ module Fastbill
       @@email = email
     end
 
-    def self.request(service, data)
-      info = Request::Info.new(service, data)
+    def self.request(service, data, limit, offset)
+      info = Request::Info.new(service, data, limit, offset)
       Request::Base.new(info).perform
     end
   end

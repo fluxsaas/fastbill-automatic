@@ -14,7 +14,7 @@ module Fastbill
                     :type, :customer_costcenter_id, :currency_code, :template_id, :introtext,
                     :invoice_date, :delivery_date, :cash_discount_percent, :cash_discount_days,
                     :eu_delivery, :items, :delete_exiting_items, :recipient, :subject, :message,
-                    :receipt_confirmation, :paid_date
+                    :receipt_confirmation, :paid_date, :due_date
 
       attr_reader   :remaining_credits
     end

@@ -2,11 +2,13 @@ module Fastbill
   module Automatic
     module Request
       class Info
-        attr_accessor :service, :data
+        attr_accessor :service, :data, :limit, :offset
 
-        def initialize(service, data)
+        def initialize(service, data, limit = 30, offset = 0)
           @service = service
           @data    = data
+          @limit   = limit
+          @offset  = offset
         end
 
         def url

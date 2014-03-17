@@ -27,7 +27,17 @@ module Fastbill
           https_request = Net::HTTP::Post.new(@info.url)
           https_request.basic_auth(Fastbill::Automatic.email, Fastbill::Automatic.api_key)
           body = {service: @info.service}
-          body[(@info.service.include?('.get') ? :filter : :data)] = @info.data
+          if @info.service.include?('.get')
+            # build request body with
+            # * filter
+            # * LIMIT
+            # * OFFSET
+            body[:filter] = @info.data
+            body[:limit]  = @info.limit
+            body[:offset] = @info.offset
+          else
+            body[:data] = @info.data
+          end
           https_request.body = body.to_json
           https_request
         end
