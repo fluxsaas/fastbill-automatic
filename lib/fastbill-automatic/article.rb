@@ -21,6 +21,8 @@ module Fastbill
                     :return_url_cancel,
                     :checkout_url
 
+      attr_reader :article_id
+
       def self.create(attributes)
         raise FastbillError.new('Create method not implemented.')
       end
